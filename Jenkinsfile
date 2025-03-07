@@ -9,12 +9,12 @@ pipeline{
     stage('Print msg') {
       steps { 
         echo 'hello from pipe'
-      }
-      stage('Python') {
-      steps { 
-        bat 'python main.py'
-      }
-    }
+      } 
   }
+    stage('Python') {
+        steps { 
+          bat 'python main.py'
+        }
+      }
 }
 }
