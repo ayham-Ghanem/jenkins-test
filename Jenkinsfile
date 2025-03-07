@@ -3,12 +3,16 @@ pipeline{
   stages{
     stage('create new file') {
       steps { 
-        sh 'touch new_file.txt'
+        bat 'touch new_file.txt'
       }
     }
     stage('Print msg') {
       steps { 
         echo 'hello from pipe'
+      }
+      stage('Python') {
+      steps { 
+        bat python main.py
       }
     }
   }
